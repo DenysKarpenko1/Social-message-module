@@ -1,0 +1,62 @@
+
+.social-widget-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 100;
+    font-family: 'Rozetka', BlinkMacSystemFont, sans-serif; 
+  }
+  
+  .social-msg {
+    background: #fff;
+    border-left: 4px solid #00a046; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 12px 35px 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #221f1f;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease-out;
+    display: none; 
+  }
+  
+  .social-msg.visible {
+    display: block;
+    animation: slideIn 0.4s forwards;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .social-msg-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #a6a5a5;
+    padding: 5px;
+    font-size: 10px;
+    line-height: 1;
+  }
+  
+  .social-msg-close:hover {
+    color: #000;
+  }
+  
+  .social-details-link {
+    color: #3e77aa;
+    text-decoration: none;
+    border-bottom: 1px dashed #3e77aa;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
+  .social-details-link:hover {
+    color: #f84147;
+    border-color: #f84147;
+  }
