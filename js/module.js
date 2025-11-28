@@ -5,11 +5,13 @@ const WIDGET_ID = "__social_widget_instance";
 
 function init() {
   if (window[WIDGET_ID]) {
+    console.warn("Widget is already loaded (Duplicate detected).");
+    return;
+  } else {
     console.log(
       "%c YOUR SCRIPT IS INSERTED",
       "background: red; color: white; font-size: 28px; font-weight: 700; padding: 8px 14px; border-radius: 4px;"
     );
-    return;
   }
 
   window[WIDGET_ID] = new SocialWidget(widgetConfig);
